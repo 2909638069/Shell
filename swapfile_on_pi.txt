@@ -1,0 +1,11 @@
+This text increases the swapfile size on Raspberry Pi
+by editing the file sudo vim /etc/dphys-swapfile
+and changing CONF_SWAPSIZE=100 to CONF_SWAPSIZE=2048.
+Then, runing follows,
+$sudo /etc/init.d/dphys-swapfile stop
+$sudo /etc/init.d/dphys-swapfile start
+$free -m # to verify the swapfile size has been increased
+
+
+All above is copied from
+https://mxnet.apache.org/install/index.html?platform=Devices&language=Python&processor=CPU
